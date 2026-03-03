@@ -2,20 +2,28 @@ using UnityEngine;
 
 public class Tl_spawn_script : MonoBehaviour
 {
-    Vector2 size =new Vector2(12,12);
+    public int x_size;
+    public int y_size;
     public GameObject Tl_prefab; 
     Vector2 pos;
+
     void Start()
     {
-        for (float i = -size.x/2; i < size.x/2; i++) 
+        Debug.Log("i am ");
+        for (int i = x_size/2; i>-x_size; i--) 
         {
-            for(int j = 0; j < size.y; j++) 
+            if(i!=0)
             {
-                pos = new Vector2(i, j);
-                GameObject new_Tl = Instantiate(Tl_prefab, pos, Quaternion.identity);
-                //Global_var.instance.tl_list.Add(new_Tl);
+                for (int j = y_size / 2; j > -y_size; j--)
+                {
+                    if (j != 0)
+                    {
+                        pos = new Vector2(i, j);
+                        Debug.Log(pos);
+                        GameObject new_Tl = Instantiate(Tl_prefab, pos, Quaternion.identity);
+                    }
+                }
             }
         }
-        
     }
 }

@@ -119,51 +119,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1 &357598396
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 357598398}
-  - component: {fileID: 357598397}
-  m_Layer: 0
-  m_Name: Tl_spawner
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &357598397
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 357598396}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2611a04bad1a7514eb683cca35852c48, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Tl_spawn_script
-  Tl_prefab: {fileID: 3175811969446393039, guid: 858831c0459ea424eafd6d1a5f55af34, type: 3}
---- !u!4 &357598398
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 357598396}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -301,7 +256,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &957191217
+--- !u!1 &1564936872
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -309,40 +264,40 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 957191219}
-  - component: {fileID: 957191218}
+  - component: {fileID: 1564936874}
+  - component: {fileID: 1564936873}
   m_Layer: 0
-  m_Name: Manager
+  m_Name: Tl_spawner
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &957191218
+--- !u!114 &1564936873
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 957191217}
+  m_GameObject: {fileID: 1564936872}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1287a68fbf873e64782310a42bfd93bc, type: 3}
+  m_Script: {fileID: 11500000, guid: 2611a04bad1a7514eb683cca35852c48, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Global_var
-  tl_list: []
-  tl_scale: 0.38
-  tl_size: {x: 8, y: 12}
---- !u!4 &957191219
+  m_EditorClassIdentifier: Assembly-CSharp::Tl_spawn_script
+  x_size: 2
+  y_size: 2
+  Tl_prefab: {fileID: 7085196747050637005, guid: 858831c0459ea424eafd6d1a5f55af34, type: 3}
+--- !u!4 &1564936874
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 957191217}
+  m_GameObject: {fileID: 1564936872}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -1.04519, y: -0.24353, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -353,5 +308,4 @@ SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 519420032}
-  - {fileID: 957191219}
-  - {fileID: 357598398}
+  - {fileID: 1564936874}
