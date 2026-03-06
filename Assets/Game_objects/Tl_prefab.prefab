@@ -104,4 +104,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a6107b7a0926cc2449a16d711086a4ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Tl_script
-  global_size: 0.5
+  global_size: 0.275

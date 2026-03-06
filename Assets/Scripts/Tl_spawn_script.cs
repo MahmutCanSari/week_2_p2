@@ -9,20 +9,14 @@ public class Tl_spawn_script : MonoBehaviour
 
     void Start()
     {
-        Debug.Log("i am ");
-        for (int i = x_size/2; i>-x_size; i--) 
+        --x_size;
+        --y_size;
+        for(int y=y_size+1; y>=-y_size; y--) 
         {
-            if(i!=0)
+            for (int x=x_size+1; x>=-x_size; x--) 
             {
-                for (int j = y_size / 2; j > -y_size; j--)
-                {
-                    if (j != 0)
-                    {
-                        pos = new Vector2(i, j);
-                        Debug.Log(pos);
-                        GameObject new_Tl = Instantiate(Tl_prefab, pos, Quaternion.identity);
-                    }
-                }
+                pos = new Vector2(x-0.5f,y-0.5f);
+                Instantiate(Tl_prefab, pos, Quaternion.identity);
             }
         }
     }
