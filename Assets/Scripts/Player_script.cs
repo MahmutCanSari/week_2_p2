@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public class Player_script : MonoBehaviour
@@ -13,17 +14,29 @@ public class Player_script : MonoBehaviour
     float size;
     float t;
 
-    //int body_order = 0;
-    //int tail_size = 0; 
-    //Vector2[] last_locations = null;
-    //GameObject[] tails = null;
+    int tail_size = 2; 
+    Vector2[] last_pos_array = null;
+    GameObject[] tails = null;
+    public GameObject tail;
 
     void Start()
     {
         Application.targetFrameRate = 60;
         size = 1.28f * 0.275f;
-    }
+        
+        
+        Array.Resize(ref last_pos_array, tail_size);
+        Array.Resize(ref tails, tail_size);
 
+        for (int i = 0; i < tail_size; i++) 
+        {
+            tails[i] = Instantiate(tail);
+            tails[i].
+        
+        }
+
+    }
+    
     void Update()
     {
 
@@ -36,9 +49,15 @@ public class Player_script : MonoBehaviour
         if (t >= 1)
         {
             pos = next_pos;
+            for (int i = last_pos_array.Length - 1; i > 0; i--)
+            {
+                last_pos_array[i] = last_pos_array[i - 1];
+            }
+            last_pos_array[0] = pos;
+
+
             is_moving = false;
             t = 0.05f;
-            Debug.Log("i am here");
         }
         if (!is_moving)
         {
@@ -80,6 +99,7 @@ public class Player_script : MonoBehaviour
             head_diraction = new Vector2(1, 0);
         }
     }
+
 
 
 

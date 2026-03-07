@@ -360,6 +360,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: acf96c84a652119468c78a35a4516f1e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Player_script
+  tail: {fileID: 821726968014129756, guid: a97ba89cd6f01f24f9ae508ff20f6891, type: 3}
 --- !u!1 &1564936872
 GameObject:
   m_ObjectHideFlags: 0
