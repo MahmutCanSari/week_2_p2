@@ -31,8 +31,9 @@ public class Player_script : MonoBehaviour
         for (int i = 0; i < tail_size; i++) 
         {
             tails[i] = Instantiate(tail);
-            tails[i].
-        
+            tails[i].GetComponent<Tail_script>();
+
+            
         }
 
     }

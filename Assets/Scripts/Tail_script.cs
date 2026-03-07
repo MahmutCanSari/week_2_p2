@@ -27,7 +27,7 @@ public class Tail_script : MonoBehaviour
         out_pos = temp;
     }
 
-    void Move()
+    public void Move()
     {
         if (t >= 1)
         {
