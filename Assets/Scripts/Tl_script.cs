@@ -17,7 +17,7 @@ public class Tl_script : MonoBehaviour
         loc.x = tl_loc.x*loc_size;
         loc.y = tl_loc.y*loc_size;
 
-        transform.position = loc;
+        transform.position = new Vector3(loc.x,loc.y,5f);
         transform.localScale = new Vector3(global_size,global_size,1f);
     }
 
