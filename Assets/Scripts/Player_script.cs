@@ -16,7 +16,7 @@ public class Player_script : MonoBehaviour
 
     int tail_size = 2; 
     Vector2[] last_pos_array = null;
-    GameObject[] tails = null;
+    Tail_script[] tails = null;
     public GameObject tail;
 
     void Start()
@@ -30,10 +30,8 @@ public class Player_script : MonoBehaviour
 
         for (int i = 0; i < tail_size; i++) 
         {
-            tails[i] = Instantiate(tail);
-            tails[i].GetComponent<Tail_script>();
-
-            
+            tails[i] = Instantiate(tail).GetComponent<Tail_script>();
+            tails[i].get_loc(last_pos_array[i]);
         }
 
     }

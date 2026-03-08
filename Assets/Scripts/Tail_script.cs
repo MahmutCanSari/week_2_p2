@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public class Tail_script : MonoBehaviour
@@ -10,7 +11,7 @@ public class Tail_script : MonoBehaviour
     Vector2 out_pos;
 
     float size;
-    float t;
+    float t=0f;
 
     void Start()
     {
@@ -19,21 +20,23 @@ public class Tail_script : MonoBehaviour
 
     void Update()
     {
+        
         Move();
     }
 
-    void get_loc(Vector2 temp) 
+    internal void get_loc(Vector2 temp) 
     {
         out_pos = temp;
     }
 
     public void Move()
     {
+        Debug.Log("yyyy");
         if (t >= 1)
         {
             pos = next_pos;
+            next_pos = out_pos;
             t = 0.05f;
-      
             last_pos = pos;      
         }
 
@@ -47,4 +50,6 @@ public class Tail_script : MonoBehaviour
 
         t += 0.05f;
     }
+
+
 }
